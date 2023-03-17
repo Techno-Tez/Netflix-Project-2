@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Roboto:wght@100;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* resets  */
+
+h1{
+    font-size: 3.2rem;
+    line-height: 55px;
+}
+h2{
+    font-size: 2.3rem;
+}
+h3{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+p{
+    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    list-style: none;
+}
+hr{
+    height: 10px;
+    background-color: #474747;
+    outline: none;
+    border-color: #474747;
+}
+
+/* utilities  */
+
+.container{
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 20px;
+    overflow: hidden;
+
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.primary-button{
+    border: 0.5px solid #706f6ff8;
+    border-radius: 6px;
+    font-weight: 200;
+    color: #faf9f9;
+    background-color: #1f1f1f;
+    padding: 12px 24px;
+    transition: 0.2sec ease-out;
+    margin-left: 17px;
+    font-size: 16px;
+}
+.get-started{
+
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    background-color: #ff0303;
+    color: #ffffff;
+    padding: 20px 40px;
+    transition: 0.2sec ease-out;
+    margin-left: 17px;
+    font-size: 24px;
+}
+    
+.initial{
+    width: 100%;
+    background-image: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(./assets/IN-en-20230313-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px 8%;
+    position: relative;
+}
+
+/* header  */
+
+nav{
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 170px;
+    cursor: pointer;
+}
+
+.primary-button img{
+    margin-left: 5px;
+    width: 10px;
+}
+.sign{
+    background-color: #ff0303;
+    font-weight: 700;
+}
+
+
+/* hero  */
+.header-content{
+    margin-top: 200px;
+    text-align: center;
+}
+
+.header-content h3{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.header-content p{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.email-signup{
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 160px;
+}
+.email-signup input[type="email"]{
+    width: 40%;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: rgba(49, 49, 49, 0.699);
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* big feature section */
+.big-feature-section{
+    padding: 40px 0 120px;
+    margin-top: 40px;
+}
+.big-feature-container{
+    /* flex-wrap: wrap; */
+    gap: 100px;
+}
+.feature-desc{
+    width: 60%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+.feature-img img{
+    width: 100%;
+}
+#invert-images{
+    flex-direction: row-reverse;
+}
+
+/* faq */
+.faq{
+    padding-top: 60px;
+    text-align: center;
+}
+.accordion{
+    margin: 20px auto;
+    width: 100%;
+    flex-direction: column;
+}
+.accordion li{
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Roboto',sans-serif;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+} 
+label::after{
+    content: '+';
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight:300;
+    position: absolute; /* as label is relative it will come at the end of box */
+    right: 20px;
+    transition: transform 0.3s;
+}
+
+input[type="radio"]{
+    display: none;
+}
+.content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+small{
+    text-align: center;
+}
+small p{
+    margin-top: 33px;
+}
+small form{
+    margin-top: 20px;
+    font-weight: 0;
+    margin-bottom: 60px;
+}
+small form input{
+    color: #fff;
+}
+
+/* footer  */
+footer{
+    margin-top: 50px;
+    font-family: "Roboto",sans-serif;
+}
+footer p{
+    margin-top: 30px;
+    color:#ffffffd2;
+}
+footer p a{
+    color:#ffffffd2;
+    text-decoration: underline;
+}
+.footer-container{
+    margin-top: 35px;
+    width: 100%;
+    gap: 200px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.link-column{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.hover-link{
+    color:#ffffffd2;
+    text-decoration: underline;
+}
+
+
+.sub-footer{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.language-btn-footer{
+    width: 140px;
+    border: 0;
+    outline: 0;
+    background:rgb(68, 68, 68);
+    color: #fff;
+    padding: 10px 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
